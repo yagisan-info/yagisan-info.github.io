@@ -1,0 +1,171 @@
+@charset "UTF-8";
+* {
+  color: #000;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  font-size: 1em;
+  list-style: none;
+  font-family: inherit;
+  line-height: 1.2;
+  text-decoration: none; }
+
+body {
+  font-size: 16px;
+  line-height: 1;
+  font-family: 'Hiragino Kaku Gothic Pro', '\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  color: #333; }
+
+@media (min-width: 600px) {
+  body {
+    font-size: calc(0.5vw + 13px); } }
+
+@media (min-width: 960px) {
+  body {
+    font-size: 20px; } }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh; }
+
+.header {
+  padding: 0.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  min-height: 2.2em;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #7090a4;
+  -webkit-box-shadow: 0 1px 5px #000;
+  box-shadow: 0 1px 5px #000; }
+  .header_title {
+    margin: 0.2em;
+    min-width: 11em;
+    font-size: 1.4em;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1 1 0%;
+    color: #fff;
+    text-shadow: 0 1px 1px #000, 1px 0 1px #000, -1px 0 1px #000, 0 -1px 1px #000; }
+  .header_menu {
+    font-size: 1em;
+    padding: 0.3em;
+    margin: 0.2em;
+    display: block;
+    margin-left: auto;
+    background-color: white;
+    color: #7eb776;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 1px 5px #000;
+    box-shadow: 0 1px 5px #000; }
+    @media (min-width: 600px) {
+      .header_menu {
+        display: none; } }
+
+.body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1 1 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.2em; }
+  .body .menu {
+    margin: 0.2em;
+    display: none; }
+    .body .menu:target {
+      display: block; }
+    @media (min-width: 600px) {
+      .body .menu {
+        display: block;
+        margin-left: auto; } }
+    .body .menu_item {
+      margin: 0.2em;
+      padding: 0.3em;
+      height: 2.4em;
+      border-radius: 0.2em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      vertical-align: middle;
+      min-width: 10em;
+      position: relative;
+      cursor: pointer;
+      border: solid 0.1em #7eb776;
+      color: #7eb776; }
+      .body .menu_item:hover {
+        background-color: #7eb776;
+        color: white; }
+  .body .main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1 1 0%;
+    margin: 0.2em; }
+    .body .main .topContent {
+      margin: 0.2em;
+      border: solid 2px #cfeacb;
+      padding: 1em;
+      border-radius: 0.6em; }
+      .body .main .topContent li, .body .main .topContent p {
+        margin: 0.2em;
+        line-height: 1.6; }
+      .body .main .topContent_item {
+        padding-left: 1.2em; }
+    .body .main .content {
+      margin: 0.2em;
+      display: block; }
+      .body .main .content_title {
+        cursor: pointer;
+        margin: 0.2em;
+        padding: 0.3em;
+        height: 2.4em;
+        border-radius: 0.2em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        vertical-align: middle;
+        min-width: 10em;
+        position: relative;
+        cursor: pointer;
+        border: solid 0.1em #7eb776;
+        color: #7eb776; }
+        .body .main .content_title:hover {
+          background-color: #7eb776;
+          color: white; }
+      .body .main .content_body {
+        margin: 0.2em; }
+      .body .main .content_title:not(:target) ~ .content_body {
+        display: none; }
+      .body .main .content_title:target ~ .content_body {
+        display: block; }
+
+.footer {
+  padding: 0.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-item: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 2em;
+  background-color: #7090a4;
+  -webkit-box-shadow: 0 -1px 5px #000;
+  box-shadow: 0 -1px 5px #000; }
