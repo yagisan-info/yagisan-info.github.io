@@ -1,0 +1,45 @@
+{
+  "name": "yagisan-info-web",
+  "description": "yagisan.info main web page.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Kadzuya Okamoto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yagisan-info/yagisan-info.github.io.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot --progress",
+    "build": "rimraf dist && webpack"
+  },
+  "devDependencies": {
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "modularscale-sass": "^3.0.2",
+    "node-sass": "^4.5.3",
+    "postcss-flexbugs-fixes": "~3.0.0",
+    "postcss-loader": "^2.0.5",
+    "postcss-reporter": "^3.0.0",
+    "pug": "^2.0.0-rc.1",
+    "pug-loader": "^2.3.0",
+    "pug-walk": "1.1.2",
+    "resolve-url-loader": "^2.0.2",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.5",
+    "scriptjs": "^2.5.8",
+    "style-loader": "^0.17.0",
+    "superagent": "^3.5.2",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-merge": "^4.1.0"
+  }
+}
