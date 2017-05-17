@@ -1,0 +1,186 @@
+@import "./_reset";
+
+$sp-size: 600px;
+$tablet-size: 960px;
+$font-color: #333;
+$font-accent-color: #e66;
+$main-color: #ff8da5;
+$sub-color: #7eb776;
+$sub-color-light: #cfeacb;
+$header-bottom: 6em;
+$default-margin: 0.2em;
+
+body {
+  font-size: 16px;
+  line-height: 1;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  color: $font-color;
+}
+
+@media (min-width: $sp-size) {
+  body {
+    font-size: calc(0.5vw + 13px);
+  }
+}
+
+@media (min-width: $tablet-size) {
+  body {
+    font-size: 20px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  padding: $default-margin;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 2.2em;
+  align-items: center;
+  background-color: #7090a4;
+  box-shadow: 0 1px 5px #000;
+
+  &_title {
+    margin: $default-margin;
+    min-width: 11em;
+    font-size: 1.4em;
+    flex: 1;
+    color: #fff;
+    text-shadow:
+      0 1px 1px #000,
+      1px 0 1px #000,
+      -1px 0 1px #000,
+      0 -1px 1px #000;
+  }
+
+  &_menu {
+    font-size: 1em;
+    padding: 0.3em;
+    margin: $default-margin;
+    display: block;
+    margin-left: auto;
+    background-color: white;
+    color: $sub-color;
+    border-radius: 0.2em;
+    box-shadow: 0 1px 5px #000;
+
+    @media (min-width: $sp-size) {
+      display: none;
+    }
+  }
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  padding: $default-margin;
+
+  .menu {
+    margin: $default-margin;
+    display: none;
+
+    &:target {
+      display: block;
+    }
+
+    @media (min-width: $sp-size) {
+      display: block;
+      margin-left: auto;
+    }
+
+    &_item {
+      margin: $default-margin;
+      padding: 0.3em;
+      height: 2.4em;
+      border-radius: 0.2em;
+      display: flex;
+      text-align: center;
+      vertical-align: middle;
+      min-width: 10em;
+      position: relative;
+      cursor: pointer;
+      border: solid 0.1em $sub-color;
+      color: $sub-color;
+
+      &:hover {
+        background-color: $sub-color;
+        color: white;
+      }
+    }
+  }
+
+  .main {
+    flex: 1;
+    margin: $default-margin;
+
+    .topContent {
+      margin: $default-margin;
+      border: solid 2px $sub-color-light;
+      padding: 1em;
+      border-radius: 0.6em;
+
+      li, p {
+        margin: $default-margin;
+        line-height: 1.6;
+      }
+
+      &_item {
+        padding-left: 1.2em;
+      }
+    }
+
+    .content {
+      margin: $default-margin;
+      display: block;
+
+      &_title {
+        cursor: pointer;
+        margin: $default-margin;
+        padding: 0.3em;
+        height: 2.4em;
+        border-radius: 0.2em;
+        display: flex;
+        text-align: center;
+        vertical-align: middle;
+        min-width: 10em;
+        position: relative;
+        cursor: pointer;
+        border: solid 0.1em $sub-color;
+        color: $sub-color;
+
+        &:hover {
+          background-color: $sub-color;
+          color: white;
+        }
+
+      }
+
+      &_body {
+        margin: $default-margin;
+      }
+
+      &_title:not(:target) ~ .content_body {
+        display: none;
+      }
+
+      &_title:target ~ .content_body {
+        display: block;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: $default-margin;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  min-height: 2em;
+  background-color: #7090a4;
+  box-shadow: 0 -1px 5px #000;
+}

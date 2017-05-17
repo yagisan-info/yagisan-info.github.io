@@ -140,13 +140,13 @@ if (TARGET_ENV === 'production') {
 
     plugins: [
       new CopyWebpackPlugin([
-        {
-          from: 'src/img/logo.svg',
-          to: 'img/'
-        },
-        {
-          from: 'src/img/favicon.ico',
-        },
+        // {
+        //   from: 'src/img/logo.svg',
+        //   to: 'img/'
+        // },
+        // {
+        //   from: 'src/img/favicon.ico',
+        // },
         {
           from: 'src/CNAME',
         },
